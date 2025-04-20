@@ -6,7 +6,8 @@ runs:
   steps:
     - id: run-orchestrator
       name: gosec
-      uses: docker://public.ecr.aws/l7o7z1g8/actions/gosec-actions:main-1ef30c34b7c5129e85c62f5c027c3f806311915c 
+      # uses: docker://public.ecr.aws/l7o7z1g8/actions/gosec-actions:main-1ef30c34b7c5129e85c62f5c027c3f806311915c 
+      uses: docker://020229604682.dkr.ecr.us-east-1.amazonaws.com/actions/gosec-actions:CBP-12062-04dd2357bb5562b8b297823b9683cd9a5fa99c4e 
       shell: bash
       env:
         RUN_ID: ${{ cloudbees.run_id }}
